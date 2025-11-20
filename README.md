@@ -24,4 +24,6 @@ The user interface should follow a clean design using a soft color palette, roun
 In summary, the task demonstrates understanding of front-end development, UI design, and basic JavaScript logic through the creation of a functional mini-shopping interface. This project can be expanded later by adding product filtering, search functionality, user login, and backend integration.
 
 
-Output:[](<img width="1080" height="651" alt="Image" src="https://github.com/user-attachments/assets/7173a9ab-07ce-4358-9c66-52786dac4148" />)
+Output:
+
+[](<img width="1080" height="651" alt="Image" src="https://github.com/user-attachments/assets/7173a9ab-07ce-4358-9c66-52786dac4148" />)
