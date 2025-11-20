@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CS Collections</title>
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: #f8f6ff;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: #6a0dad;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+    #products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 15px;
+    }
+    .product {
+      background: white;
+      margin: 10px;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      width: 180px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .product:hover { transform: scale(1.05); }
+    .product img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    button {
+      background: #6a0dad;
+      color: white;
+      border: none;
+      padding: 8px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover { background: #520b8d; }
+    #cart {
+      background: #fff;
+      padding: 15px;
+      margin: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #6a0dad;
+      color: white;
+      margin-top: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <header>🌸 CS Collections</header>
+
+  <main>
+    <section id="products">
+      <div class="product">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/03/05/shoes-1869394_640.jpg" alt="Shoes">
+        <h3>Trendy Shoes</h3>
+        <p>₹999</p>
+        <button onclick="addToCart('Trendy Shoes',999)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/bag-1869183_640.jpg" alt="Bag">
+        <h3>Leather Bag</h3>
+        <p>₹699</p>
+        <button onclick="addToCart('Leather Bag',699)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://cdn.pixabay.com/photo/2017/08/06/00/55/watch-2587265_640.jpg" alt="Watch">
+        <h3>Smart Watch</h3>
+        <p>₹1299</p>
+        <button onclick="addToCart('Smart Watch',1299)">Add to Cart</button>
+      </div>
+    </section>
+
+    <section id="cart">
+      <h2>🛒 Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <h3 id="total">Total: ₹0</h3>
+    </section>
+  </main>
+
+  <footer>© 2025 CS Collections | PWA Shop</footer>
+
+  <script>
+    let cart = [];
+
+    function addToCart(item, price) {
+      cart.push({ item, price });
+      displayCart();
+
+      // Optional: show simple alert (if notification blocked)
+      alert(item + " added to your cart!");
+    }
+
+    function displayCart() {
+      const cartItems = document.getElementById('cart-items');
+      const total = document.getElementById('total');
+      cartItems.innerHTML = '';
+      let sum = 0;
+
+      cart.forEach(i => {
+        const li = document.createElement('li');
+        li.textContent = ${i.item} - ₹${i.price};
+        cartItems.appendChild(li);
+        sum += i.price;
+      });
+
+      total.textContent = 'Total: ₹' + sum;
+    }
+  </script>
+</body>
+</html>
+
