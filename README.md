@@ -21,6 +21,7 @@ The webpage should include a responsive header, a grid-based product showcase se
 
 The user interface should follow a clean design using a soft color palette, rounded edges, light shadows, and hover animations. The layout must remain mobile-friendly and visually consistent. The footer should present the brand name and year.
 
-Output:
-
 In summary, the task demonstrates understanding of front-end development, UI design, and basic JavaScript logic through the creation of a functional mini-shopping interface. This project can be expanded later by adding product filtering, search functionality, user login, and backend integration.
+
+
+Output:[](<img width="1080" height="651" alt="Image" src="https://github.com/user-attachments/assets/1d387d28-f959-4d16-925c-e58bef5f6d1b" />)
